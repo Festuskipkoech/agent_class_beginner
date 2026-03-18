@@ -5,7 +5,7 @@
 Run this command in your terminal:
 
 ```bash
-pip install langchain-groq langchain-tavily langgraph langchain-core
+pip install langchain-groq langchain-tavily langchain-core
 ```
 
 ---
