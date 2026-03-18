@@ -1,12 +1,10 @@
 # AI Agents with Python — Course Path
-> **Level:** Beginner with intermediate Python & LangChain knowledge  
-> **Duration:** 2 Weeks  
 > **Stack:** Python · LangChain · LangGraph (intro) · Ollama (Llama 3.2) · Chroma · Tavily  
 
 ---
 
 ## Prerequisites
-Students joining this course are expected to already know:
+Students should have:
 - Python fundamentals (functions, loops, classes)
 - LangChain basics — chains and prompt templates
 - Ollama installed locally with Llama 3.2 running
@@ -105,5 +103,3 @@ This course covers single agents. The advanced course will go deeper into:
 - Agents that collaborate across specialized roles
 
 ---
-
-*Course designed for the 2026 AI engineering cohort.*

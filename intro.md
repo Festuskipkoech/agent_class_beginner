@@ -95,4 +95,3 @@ These topics were discussed but deliberately scoped out — saved for the advanc
 
 ---
 
-*Notes captured from live planning session — March 18, 2026*
