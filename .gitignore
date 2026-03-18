@@ -1,0 +1,9 @@
+.venv/
+.env
+.python-version
+course_outline.md
+intro.md
+lesson1_guide.md
+pyproject.toml
+requirements.txt
+uv.lock
