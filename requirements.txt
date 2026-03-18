@@ -1,7 +1,0 @@
-langchain
-langchain-community
-langchain-openai
-langgraph
-langchain_tavily
-python-dotenv
-langchain-groq
