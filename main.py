@@ -9,8 +9,8 @@ from datetime import date                         # used to get today's date
 import os                                         # used to set environment variables
 
 # set the API keys so langchain can find them automatically
-os.environ["TAVILY_API_KEY"] = ""
-os.environ["GROQ_API_KEY"]  = "REPLACE_WITH_YOUR_ACTURIRED"
+os.environ["TAVILY_API_KEY"] = "TAVILY_KEY_GOES_HERE" #replace with the api key acquired
+os.environ["GROQ_API_KEY"]  = "GROQ_KEY_GOES_HERE" #replace with api key acquired
 
 
 print("Loading model...")
