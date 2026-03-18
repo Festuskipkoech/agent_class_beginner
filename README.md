@@ -38,8 +38,4 @@ os.environ["TAVILY_API_KEY"] = "tvly-your-key-here"
 os.environ["GROQ_API_KEY"]   = "gsk_your-key-here"
 ```
 
-You are good to go. Run the code with:
-
-```bash
-python3 main.py
-```
+You are good to go. Run the code 
