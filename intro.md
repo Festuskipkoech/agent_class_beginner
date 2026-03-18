@@ -69,12 +69,49 @@ Three files to push to GitHub:
 
 ### Demo Agent Spec
 - Single `.py` file, no folders
-- Well commented — explains both **what** and **why**
-- API key loaded from `.env` file (good practice for students)
+- API key hardcoded with a clear placeholder — students do not have .env knowledge yet
 - Ollama running Llama 3.2 locally
 - Tavily for web search
-- ReAct agent via LangChain
-- Sample question included so students can run it immediately
+- `create_agent` from `langchain.agents` — LangChain 1.0 modern approach
+- Minimal comments in code — all detailed explanations live here in session notes
+
+---
+
+## Code Explanation Notes (for instructors and students)
+
+### Why create_agent and not create_react_agent?
+`create_react_agent` and `AgentExecutor` are officially deprecated as of LangChain 1.0 (released late 2025).
+The replacement is `create_agent` from `langchain.agents`. It runs on LangGraph under the hood, uses a middleware system for customization, and is the long-term supported path. Students should learn this from day one rather than learn something deprecated.
+
+### What is ReAct?
+ReAct stands for Reasoning + Acting. It is a prompting pattern that teaches the LLM to think in a structured loop instead of immediately guessing an answer.
+
+The loop looks like this:
+
+```
+Thought:     "The user wants current info. I should search the web."
+Action:      "I will use tavily_search with query: AI agent frameworks 2026"
+Observation: "Here are 3 search results..."
+Thought:     "I have enough information to answer."
+Final Answer: "The most popular frameworks are..."
+```
+
+This loop can repeat multiple times. If the first search is not enough the agent searches again with a different query. `create_agent` implements this loop automatically — the LLM decides when it has enough information to stop.
+
+### What each import does
+- `os` — built-in Python module used to set the Tavily API key as an environment variable
+- `ChatOllama` — LangChain's connector to Ollama running locally; no internet or API costs for the LLM
+- `TavilySearchResults` — a ready-made tool that calls the Tavily search API and returns web results
+- `create_agent` — LangChain 1.0 function that wires the LLM and tools into an agent running on LangGraph
+
+### What each parameter does
+- `model="llama3.2"` — must match exactly what was pulled with `ollama pull llama3.2`
+- `temperature=0` — makes the model focused and consistent; higher values make it more creative but less reliable for agent reasoning
+- `max_results=3` — Tavily returns the 3 most relevant search results; increase for more coverage
+- `system_prompt` — tells the agent what role it plays and how to behave; replaces the old hub.pull("hwchase17/react") prompt
+
+### What langgraph does here
+`create_agent` uses LangGraph under the hood to manage the agent loop. Students do not need to write any LangGraph code directly — they just use `create_agent`. This is intentional for this course. The advanced course will teach LangGraph explicitly.
 
 ---
 

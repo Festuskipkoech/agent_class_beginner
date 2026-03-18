@@ -12,9 +12,6 @@
 #        TAVILY_API_KEY=your_key_here
 #   4. Install dependencies:
 #        pip install langchain langchain-community langchain-ollama tavily-python python-dotenv
-#
-
-import os
 
 from langchain_ollama import ChatOllama                                    # connects LangChain to our local Ollama model
 from langchain_community.tools.tavily_search import TavilySearchResults   # web search tool
