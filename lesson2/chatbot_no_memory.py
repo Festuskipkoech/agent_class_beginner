@@ -1,4 +1,5 @@
 from typing_extensions import TypedDict 
+# 
 from langgraph.graph import StateGraph, START, END
 from langchain_ollama import ChatOllama
 
@@ -53,6 +54,7 @@ while True:
     if user_input.lower() == "exit":
         print("Nice chat, goodbye!")
         break
+    # end ends the program
     # exit if the user types 'exit'
 
     result = graph.invoke(
@@ -62,6 +64,7 @@ while True:
         # content is the actual text of the message
         {"messages": [{"role": "user", "content": user_input}]}
     )
+
     # graph.invoke() runs the full graph and returns the final State when it reaches END
 
     print(f"Assistant: {result['messages'][-1].content}\n")

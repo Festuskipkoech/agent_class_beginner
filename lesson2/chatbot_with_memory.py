@@ -6,13 +6,14 @@ from langchain_ollama import ChatOllama
 
 # Annotated allows us to attach extra behaviour to a type
 # here we use it to tell LangGraph HOW to handle updates to the messages field
-from typing import Annotated
+
 
 # same State blueprint as before — but with one key difference
 # messages is now Annotated with add_messages
 # add_messages is a reducer — instead of replacing the messages list when a node returns new messages
 # it APPENDS the new messages to the existing list
 # this is what gives the chatbot memory — the list keeps growing with every exchange
+
 class State(TypedDict):
     messages: Annotated[list, add_messages]
 
