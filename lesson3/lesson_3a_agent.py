@@ -1,3 +1,4 @@
+# pip install langchain-core langchain-ollama langgraph
 from typing import Annotated
 from typing_extensions import TypedDict
 from datetime import datetime
