@@ -1,0 +1,10 @@
+langchain
+langchain-community
+langchain-openai
+langgraph
+langchain_tavily
+python-dotenv
+langchain-groq
+langchain-chroma
+langchain-google-genai
+langchain-text-splitters
