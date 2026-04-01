@@ -246,6 +246,7 @@ No new packages are needed for this lesson. Everything was installed in Lesson 4
 ```bash
 pip install chromadb langchain-google-genai langchain-text-splitters
 pip install langchain langchain-community langgraph langchain-tavily python-dotenv
+pip install pillow
 ```
 
 Your `.env` file still needs:
