@@ -132,7 +132,7 @@ def search_knowledge_base(query: str) -> str:
 
 
 # STEP 5 — LLM setup
-# We use Gemini 2.0 Flash as the agent brain.
+# We use Gemini 2.5 Flash as the agent brain.
 # Groq's general-purpose models have a known issue generating malformed tool call
 # syntax which causes 400 errors. Gemini's tool calling is reliable and uses the
 # same GOOGLE_API_KEY already in your .env for embeddings — no extra key needed.

@@ -5,3 +5,6 @@ intro.md
 lesson1_guide.md
 pyproject.toml
 uv.lock
+lesson4/chroma_db/
+lesson5/chroma_db/
+lesson5/memory_db/
